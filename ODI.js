@@ -14,7 +14,7 @@
       slide = ref[index];
       dotHTML += '<span class="dot" onclick="showSlide(' + index + ')"></span>';
     }
-    $('#dot-component').innerHTML = dotHTML;
+    $('#dot-component')[0].innerHTML = dotHTML;
     showSlide(slideIndex);
     ref1 = $('.slideshow-container').find('img');
     for (j = 0, len1 = ref1.length; j < len1; j++) {
@@ -36,7 +36,7 @@
     if (n == null) {
       n = 1;
     }
-    showSlides(slideIndex += n);
+    showSlide(slideIndex += n);
   };
 
   this.showSlide = function(n) {
@@ -56,7 +56,7 @@
     }
     for (j = 0, len1 = dots.length; j < len1; j++) {
       dot = dots[j];
-      dot.className.replace(' active', '');
+      dot.className = 'dot';
     }
     slides[slideIndex].style.display = 'block';
     dots[slideIndex].className += ' active';

@@ -3,7 +3,7 @@ slideIndex = 0
 $(document).ready ->
   dotHTML = ''
   dotHTML += '<span class="dot" onclick="showSlide(' + index + ')"></span>' for slide, index in $('.slide')
-  $('#dot-component').innerHTML = dotHTML
+  $('#dot-component')[0].innerHTML = dotHTML
   showSlide slideIndex
   initHammer(photo) for photo in $('.slideshow-container').find('img')
   setInterval plusSlides, 5000
@@ -17,7 +17,7 @@ $(document).ready ->
   return
   
 @plusSlides = (n = 1) ->
-  showSlides slideIndex += n
+  showSlide slideIndex += n
   return
   
 @showSlide = (n) ->
@@ -27,7 +27,7 @@ $(document).ready ->
   slideIndex = 0 if slideIndex >= slides.length
   slideIndex = slides.length - 1 if slideIndex < 0
   slide.style.display = 'none' for slide, index in slides
-  dot.className.replace ' active', '' for dot in dots
+  dot.className = 'dot' for dot in dots
   slides[slideIndex].style.display = 'block'
   dots[slideIndex].className += ' active'
   return

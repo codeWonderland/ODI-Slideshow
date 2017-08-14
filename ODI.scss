@@ -8,7 +8,7 @@
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 45%;
     width: auto;
     padding: 16px;
     color: white;
@@ -35,6 +35,11 @@
     &.active, &:hover {
       background-color: #717171;
     }
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
   }
 }
 
