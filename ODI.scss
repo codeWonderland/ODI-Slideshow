@@ -11,7 +11,7 @@
     top: 45%;
     width: auto;
     padding: 16px;
-    color: white;
+    color: rgb(76, 173, 233);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -41,6 +41,10 @@
     right: 0;
     border-radius: 3px 0 0 3px;
   }
+
+  .prev {
+    left: 0;
+  }
 }
 
 /* Fading animation */
@@ -64,5 +68,21 @@
 @media only screen and (max-width: 768px) {
   .prev, .next {
     display: none;
+  }
+}
+
+.champ-card {
+  border-radius: 3px;
+  border: 1px solid #eee;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fffefe;
+
+  h1, h2, h3, h4, h5 {
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

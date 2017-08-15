@@ -8,7 +8,7 @@
     top: 45%;
     width: auto;
     padding: 16px;
-    color: white;
+    color: #4cade9;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -29,6 +29,8 @@
   .slideshow-container .next {
     right: 0;
     border-radius: 3px 0 0 3px; }
+  .slideshow-container .prev {
+    left: 0; }
 
 /* Fading animation */
 .fade {
@@ -50,5 +52,15 @@
 @media only screen and (max-width: 768px) {
   .prev, .next {
     display: none; } }
+.champ-card {
+  border-radius: 3px;
+  border: 1px solid #eee;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fffefe; }
+  .champ-card h1:first-child, .champ-card h2:first-child, .champ-card h3:first-child, .champ-card h4:first-child, .champ-card h5:first-child {
+    margin-top: 0; }
 
 /*# sourceMappingURL=ODI.css.map */
